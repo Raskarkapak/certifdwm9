@@ -30,7 +30,8 @@ Route::get('/listeDesAlbums', 'NavController@listeAlbums');
 Route::get('/insertAlbum','ActionController@insertAlbum');
 
 
-
+Route::post('/updateAlbum', 'NavController@updateAlbum');
+Route::post('/updateOneAlbum', 'ActionController@updateOneAlbum');
 
 Route::post('/updateInstrument', 'NavController@updateInstrument');
 Route::post('/updateOneInstrument', 'ActionController@updateOneInstrument');

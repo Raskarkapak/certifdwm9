@@ -8,11 +8,12 @@
 </head>
 <body>
     <h1>Coucou ! mise a jour</h1>
-    {!! Form::open(['url' => '/updateOneInstrument']) !!}
-    {{ Form::hidden('id', $instrument->id)}}
-    {!! Form::text('name', $instrument->name) !!}
-    {!! Form::text('price', $instrument->price) !!}
-    {!! Form::text('stock', $instrument->stock) !!}
+    {!! Form::open(['url' => '/updateOneAlbum']) !!}
+    {{ Form::hidden('id', $album->id)}}
+    {!! Form::text('title', $album->title) !!}
+    {!! Form::text('artist', $album->artist) !!}
+    {!! Form::text('price', $album->price) !!}
+    {!! Form::text('stock', $album->stock) !!}
     {!! Form::submit('Mettre à jour') !!}
     {!! Form::close() !!}
 </body>

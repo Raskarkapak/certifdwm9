@@ -34,6 +34,12 @@
                     {{ Form::submit('X') }}
                     {{ Form::close() }}
                 </td>
+                <td>
+                        {!! Form::open(['url' => '/updateAlbum'])!!}
+                        {!! Form::hidden('id', $album->id) !!}
+                        {!! Form::submit('U')!!}
+                        {!! Form::close()!!}
+                </td>  
            
                 
             </tr>

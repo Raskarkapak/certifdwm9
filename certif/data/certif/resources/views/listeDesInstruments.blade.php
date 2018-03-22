@@ -34,7 +34,7 @@
                     {{ Form::close() }}
                 </td>
                 <td>
-                    {!! Form::open(['url' => '/updateOneInstrument'])!!}
+                    {!! Form::open(['url' => '/updateInstrument'])!!}
                     {!! Form::hidden('id', $instrument->id) !!}
                     {!! Form::submit('U')!!}
                     {!! Form::close()!!}

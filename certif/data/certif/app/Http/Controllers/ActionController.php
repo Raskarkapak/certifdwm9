@@ -30,8 +30,9 @@ class ActionController extends Controller
     }
     public function updateOneInstrument(Request $request)
     {
+        
         $updatedInstrument = Instrument::updateOneInstrument($request);
-        return redirect('/updateInstrument');
+        return redirect('/listeDesInstruments');
     }
 
 
@@ -63,6 +64,12 @@ class ActionController extends Controller
         }
     }
 
+    public function updateOneAlbum(Request $request)
+    {
+        
+        $updatedAlbum = Album::updateOneAlbum($request);
+        return redirect('/listeDesAlbums');
+    }
 
 
 

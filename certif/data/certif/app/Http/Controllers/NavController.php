@@ -21,6 +21,12 @@ class NavController extends Controller
 
     public function updateInstrument(Request $request)
     {
-        return view ('updateInstrument', ['instruments' => Instrument::getInstrument($request)]);
+        return view ('updateInstrument', ['instrument' => Instrument::getOneInstrument($request)]);
+    }
+
+
+    public function updateAlbum(Request $request)
+    {
+        return view ('updateAlbum', ['album' => Album::getOneAlbum($request)]);
     }
 }

@@ -10,11 +10,14 @@ class Instrument extends Model
     {
         return Instrument::all();
     }
+    public static function getOneInstrument($request)
+    {
+        return Instrument::find($request->id);
+    }
     public static function insertOneInstrument($request)
     {
         $instrument = new Instrument();
         $instrument->name = $request->name;
-       // $instrument->type = $request->type;
         $instrument->price = $request->price;
         $instrument->stock = $request->stock;
         $instrument->save();
@@ -36,4 +39,5 @@ class Instrument extends Model
         $instrument->save();
         return $instrument;
     }
+
 }
