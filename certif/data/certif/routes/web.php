@@ -15,12 +15,7 @@ Route::get('/', function () {
     return view('accueil');
 });
 
-Route::get('/insertOneArticle', function(){
-    return view('/insertOneArticle');
-});
-Route::get('/listeProduits', function(){
-    return view('/listeProduits');
-});
+
 
 
 Route::get('/insertInstrument', 'ActionController@insertInstrument');
