@@ -9,8 +9,8 @@
 <body>
     <nav>
         <ul>
-            <li><a href="/insertInstrument">Ajouter un instrument</a></li>
-            <li><a href="/listeDesInstruments">Liste des instruments</a></li>
+            <li><a href="/listeProduits">Liste des produits</a></li>
+            <li><a href="/insertOneArticle">Ajouter un article</a></li>
         </ul>
     </nav>
     <h1>Magasin de musique</h1>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Instrument as Instrument;
+use App\Album as Album;
 
 class NavController extends Controller
 {
@@ -12,5 +13,14 @@ class NavController extends Controller
         
         return view('listeDesInstruments', ['instruments' => Instrument::getInstrument()]);
     }
+    public function listeAlbums()
+    {
+        
+        return view('listeDesAlbums', ['albums' => Album::getAlbum()]);
+    }
 
+    public function updateInstrument(Request $request)
+    {
+        return view ('updateInstrument', ['instruments' => Instrument::getInstrument($request)]);
+    }
 }

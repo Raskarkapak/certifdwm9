@@ -10,7 +10,7 @@
     <nav>
         <ul>
             <li><a href="/">Accueil</a></li>
-            <li><a href="/insertInstrument">Ajouter un instrument</a></li>
+            <li><a href="/listeDesAlbums">Voir les albums</a></li>
         </ul>
     </nav>
     <h1>Liste des instruments</h1>
@@ -19,14 +19,26 @@
             <th>Nom du produit</th>
             <th>Prix</th>
             <th>Stock</th>
+            <th>Suppression</th>
+            <th>Modifier</th>
         </tr>
         @foreach ($instruments as $instrument)
             <tr>
                 <td>{{$instrument->name}}</td>
                 <td>{{$instrument->price}}</td>
                 <td>{{$instrument->stock}}</td>
-                
-                <td>{{--}} faire un foreach pour la relation many to many plus tard {{--}}</td>    
+                <td>
+                    {{ Form::open(['url' => '/deleteOneInstrument'])}}
+                    {{ Form::hidden('id', $instrument->id) }}
+                    {{ Form::submit('X') }}
+                    {{ Form::close() }}
+                </td>
+                <td>
+                    {!! Form::open(['url' => '/updateOneInstrument'])!!}
+                    {!! Form::hidden('id', $instrument->id) !!}
+                    {!! Form::submit('U')!!}
+                    {!! Form::close()!!}
+                </td>  
                 
             </tr>
         @endforeach

@@ -20,4 +20,20 @@ class Instrument extends Model
         $instrument->save();
         return $instrument;
     }
+    public static function deleteOneInstrument($request)
+    {
+        $instrument = Instrument::findOrFail($request->id);
+        $instrument->delete();
+        return true;
+    }
+
+    public static function updateOneInstrument($request)
+    {
+        $instrument = Instrument::findOrFail($request->id);
+        $instrument->name = $request->name;
+        $instrument->price = $request->price;
+        $instrument->stock = $request->stock;
+        $instrument->save();
+        return $instrument;
+    }
 }

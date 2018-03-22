@@ -10,13 +10,13 @@
     <nav>
         <ul>
             <li><a href="/">Accueil</a></li>
-            <li><a href="/listeDesInstruments">Liste des instruments</a></li>
+            <li><a href="/insertAlbum">Ajouter un album</a></li>
         </ul>
     </nav>
     <h1>Ajout</h1>
     {!! Form::open(['url' => 'insertOneInstrument']) !!}
     {{  Form::text('name', 'Nom du produit' )}} 
-    {{--}} A rajouter plus tard , faire un select pour le type{{--}}
+    
     {{  Form::text('price', 'Prix' )}}
     {{  Form::text('stock', 'Quantité' )}}
     {{  Form::submit('Ajouter au magasin')}}
