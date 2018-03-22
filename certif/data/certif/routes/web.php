@@ -14,6 +14,8 @@
 Route::get('/', function () {
     return view('accueil');
 });
-Route::get('/insertInstrument', 'NavController@insertOneInstrument');
+Route::get('/insertInstrument', 'ActionController@insertInstrument');
+Route::get('/listeDesInstruments', 'NavController@liste');
+
 
 Route::post('/insertOneInstrument', 'ActionController@insertOneInstrument');

@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Instrument extends Model
 {
+    public static function getInstrument()
+    {
+        return Instrument::all();
+    }
     public static function insertOneInstrument($request)
     {
         $instrument = new Instrument();

@@ -9,10 +9,12 @@
 <body>
     <nav>
         <ul>
-            <li><a href="/insertInstrument">Ajouter une flute</a></li>
+            <li><a href="/insertInstrument">Ajouter un instrument</a></li>
+            <li><a href="/listeDesInstruments">Liste des instruments</a></li>
         </ul>
     </nav>
     <h1>Magasin de musique</h1>
+
 
 </body>
 </html>

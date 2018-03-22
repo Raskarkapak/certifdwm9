@@ -7,6 +7,12 @@
     <title>Ajouter un instrument au magasin</title>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/listeDesInstruments">Liste des instruments</a></li>
+        </ul>
+    </nav>
     <h1>Ajout</h1>
     {!! Form::open(['url' => 'insertOneInstrument']) !!}
     {{  Form::text('name', 'Nom du produit' )}} 

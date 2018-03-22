@@ -12,4 +12,9 @@ class ActionController extends Controller
        $newInstrument = Instrument::insertOneInstrument($request);
        return redirect('insertInstrument');
     }
+
+    public function insertInstrument(Request $request)
+    {
+        return view('insertInstrument');
+    }
 }

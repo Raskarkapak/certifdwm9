@@ -7,8 +7,10 @@ use App\Instrument as Instrument;
 
 class NavController extends Controller
 {
-    public function insertOneInstrument(Request $request)
+    public function liste()
     {
-        return view('insertInstrument');
+        
+        return view('listeDesInstruments', ['instruments' => Instrument::getInstrument()]);
     }
+
 }
