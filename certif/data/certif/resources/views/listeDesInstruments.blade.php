@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('main')
-    <h1>Liste des instruments</h1>
+    <h1 class="LEH1">Liste des instruments</h1>
     <table>
         <tr>
             <th>Nom du produit</th>
@@ -17,13 +17,13 @@
                 <td>
                     {{ Form::open(['url' => '/deleteOneInstrument'])}}
                     {{ Form::hidden('id', $instrument->id) }}
-                    {{ Form::submit('X') }}
+                    {{ Form::submit('supprimer') }}
                     {{ Form::close() }}
                 </td>
                 <td>
                     {!! Form::open(['url' => '/updateInstrument'])!!}
                     {!! Form::hidden('id', $instrument->id) !!}
-                    {!! Form::submit('U')!!}
+                    {!! Form::submit('modifier')!!}
                     {!! Form::close()!!}
                 </td>  
                 
@@ -42,14 +42,16 @@
         
 </tr>
 <tr>
-        <h1>Ajouter un instrument</h1>
+        <h1 class="LEH1">Ajouter un instrument</h1>
              {!! Form::open(['url' => 'insertOneInstrument']) !!}
-        <td>  {{  Form::text('name', 'Nom du produit' )}}</td>
+        <td>  {{  Form::text('name' )}}</td>
     
-        <td>  {{  Form::text('price', 'Prix' )}}</td>  
-        <td>  {{  Form::text('stock', 'Quantité' )}}</td>
-        <td>  {{  Form::submit('Ajouter au magasin')}}</td>  
-             {!! Form::close() !!}
+        <td>  {{  Form::text('price' )}}</td>  
+        <td>  {{  Form::text('stock' )}}</td>
+    </tr>
+    <tr>
+            <td class="submit">  {{  Form::submit('Ajouter au magasin')}}</td>  
+            {!! Form::close() !!}
     </tr>
 </table>
 @endsection

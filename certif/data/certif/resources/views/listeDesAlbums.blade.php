@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('main')
-    <h1>Liste des albums</h1>
+    <h1 class="LEH1">Liste des albums</h1>
     <table>
         <tr>
             <th>Titre</th>
@@ -22,13 +22,13 @@
                 <td>
                     {{ Form::open(['url' => '/deleteOneAlbum'])}}
                     {{ Form::hidden('id', $album->id) }}
-                    {{ Form::submit('X') }}
+                    {{ Form::submit('supprimer') }}
                     {{ Form::close() }}
                 </td>
                 <td>
                     {!! Form::open(['url' => '/updateAlbum'])!!}
                     {!! Form::hidden('id', $album->id) !!}
-                    {!! Form::submit('U')!!}
+                    {!! Form::submit('modifier')!!}
                     {!! Form::close()!!}
                 </td>  
            
@@ -38,7 +38,7 @@
     </table>
 @endsection
 @section('main2')
-<h1>Ajouter un Album</h1>
+<h1 class="LEH1">Ajouter un Album</h1>
 <table>
     <tr>
         <th>Titre</th>
@@ -49,12 +49,15 @@
     </tr>
      <tr>
             {!! Form::open(['url' => 'insertOneAlbum']) !!}
-        <td>{{  Form::text('title', 'titre de l\'album' )}} </td>
-        <td>{{  Form::text('artist', 'Nom de l\'artiste' )}} </td>
+        <td>{{  Form::text('title')}} </td>
+        <td>{{  Form::text('artist' )}} </td>
             {{--}}{!! Form::select('genres[]', $genresArray, null, ['multiple' => 'multiple']) !!} {{--}}
-        <td>{{  Form::text('price', 'Prix' )}}</td> 
-        <td>{{  Form::text('stock', 'Quantité' )}}</td> 
-        <td>{{  Form::submit('Ajouter au magasin')}}</td>            {!! Form::close() !!}
+        <td>{{  Form::text('price')}}</td> 
+        <td>{{  Form::text('stock' )}}</td>       
+    </tr>  
+    <tr>
+            <td class="submit">{{  Form::submit('Ajouter au magasin')}}</td>   
+            {!! Form::close() !!}   
     </tr>
 </table>
 @endsection

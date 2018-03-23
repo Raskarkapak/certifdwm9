@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('main')
-    <h1>Liste des genres</h1>
+    <h1 class="LEH1">Liste des genres</h1>
     <table>
         <tr>
             <th>Genre</th>
@@ -13,13 +13,13 @@
                 <td>
                     {{ Form::open(['url' => '/deleteOneGenre'])}}
                     {{ Form::hidden('id', $genre->id) }}
-                    {{ Form::submit('X') }}
+                    {{ Form::submit('supprimer') }}
                     {{ Form::close() }}
                 </td>
                 <td>
                         {!! Form::open(['url' => '/updateGenre'])!!}
                         {!! Form::hidden('id', $genre->id) !!}
-                        {!! Form::submit('U')!!}
+                        {!! Form::submit('modifier')!!}
                         {!! Form::close()!!}
                 </td>  
            
@@ -30,11 +30,16 @@
 @endsection
 @section('main2')
 
-<h1>Ajouter un genre</h1>
-{!! Form::open(['url' => '/insertOneGenre']) !!}
-{!! Form::text('genre', 'Genre') !!}
-{!! Form::submit('Ajouter un Genre') !!}
-{!! Form::close() !!}
-
-
+<h1 class="LEH1">Ajouter un genre</h1>
+<table>
+    <th>Genre</th>
+<tr>
+        {!! Form::open(['url' => '/insertOneGenre']) !!}
+    <td>{!! Form::text('genre') !!}</td>
+</tr>
+<tr>
+    <td class="submit2">{!! Form::submit('Ajouter un Genre') !!}</td>
+        {!! Form::close() !!}
+</tr>
+</table>
 @endsection

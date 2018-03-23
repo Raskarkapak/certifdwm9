@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="../css/app.css">
 </head>
 <body>
-    <h1>Magasin de Musique</h1>
+    
 <header>
+    <h1 class="LEH1">Magasin de Musique</h1>
     <nav>
         <ul>
             <li><a href="/listeDesInstruments">Instruments</a></li>
