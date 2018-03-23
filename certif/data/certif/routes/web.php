@@ -21,18 +21,30 @@ Route::get('/', function () {
 Route::get('/insertInstrument', 'ActionController@insertInstrument');
 Route::get('/listeDesInstruments', 'NavController@liste');
 
-Route::get('/listeDesAlbums', 'NavController@listeAlbums');
-Route::get('/insertAlbum','ActionController@insertAlbum');
+Route::post('/updateInstrument', 'NavController@updateInstrument');
+Route::post('/updateOneInstrument', 'ActionController@updateOneInstrument');
+Route::post('/insertOneInstrument', 'ActionController@insertOneInstrument');
+Route::post('/deleteOneInstrument', 'ActionController@deleteOneInstrument');
 
+
+
+
+Route::get('/insertAlbum','ActionController@insertAlbum');
+Route::get('/listeDesAlbums', 'NavController@listeAlbums');
 
 Route::post('/updateAlbum', 'NavController@updateAlbum');
 Route::post('/updateOneAlbum', 'ActionController@updateOneAlbum');
-
-Route::post('/updateInstrument', 'NavController@updateInstrument');
-Route::post('/updateOneInstrument', 'ActionController@updateOneInstrument');
-
 Route::post('/insertOneAlbum', 'ActionController@insertOneAlbum');
 Route::post('/deleteOneAlbum', 'ActionController@deleteOneAlbum');
 
-Route::post('/insertOneInstrument', 'ActionController@insertOneInstrument');
-Route::post('/deleteOneInstrument', 'ActionController@deleteOneInstrument');
+
+
+
+
+Route::get('/insertGenre', 'ActionController@insertGenre');
+Route::get('/listeDesGenres', 'NavController@listeGenres');
+
+Route::post('/insertOneGenre', 'ActionController@insertOneGenre');
+Route::post('/deleteOneGenre', 'ActionController@deleteOneGenre');
+
+

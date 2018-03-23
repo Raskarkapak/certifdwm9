@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Instrument as Instrument;
 use App\Album as Album;
+use App\Genre as Genre;
 
 class NavController extends Controller
 {
@@ -18,7 +19,11 @@ class NavController extends Controller
         
         return view('listeDesAlbums', ['albums' => Album::getAlbum()]);
     }
-
+    public function listeGenres()
+    {
+        
+        return view('listeDesGenres', ['genres' => Genre::getGenres()]);
+    }
     public function updateInstrument(Request $request)
     {
         return view ('updateInstrument', ['instrument' => Instrument::getOneInstrument($request)]);
@@ -29,4 +34,6 @@ class NavController extends Controller
     {
         return view ('updateAlbum', ['album' => Album::getOneAlbum($request)]);
     }
+
+
 }

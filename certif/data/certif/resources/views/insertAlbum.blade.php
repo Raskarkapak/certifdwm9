@@ -1,12 +1,22 @@
 @extends('layouts.base')
-@section('main')
-            <h1>Ajout</h1>
+@section('main2')
+<h1>Ajouter un Album</h1>
+<table>
+    <tr>
+        <th>Titre</th>
+        <th>Artiste</th>
+     
+        <th>Prix</th>
+        <th>Stock</th>
+    </tr>
+     <tr>
             {!! Form::open(['url' => 'insertOneAlbum']) !!}
-            {{  Form::text('title', 'titre de l\'album' )}} 
-            {{  Form::text('artist', 'Nom de l\'artiste' )}} 
-            
-            {{  Form::text('price', 'Prix' )}}
-            {{  Form::text('stock', 'Quantité' )}}
-            {{  Form::submit('Ajouter au magasin')}}
-            {!! Form::close() !!}
+        <td>{{  Form::text('title', 'titre de l\'album' )}} </td>
+        <td>{{  Form::text('artist', 'Nom de l\'artiste' )}} </td>
+            {{--}}{!! Form::select('genres[]', $genresArray, null, ['multiple' => 'multiple']) !!} {{--}}
+        <td>{{  Form::text('price', 'Prix' )}}</td> 
+        <td>{{  Form::text('stock', 'Quantité' )}}</td> 
+        <td>{{  Form::submit('Ajouter au magasin')}}</td>            {!! Form::close() !!}
+    </tr>
+</table>
 @endsection

@@ -25,11 +25,15 @@ class Album extends Model
         $album->price = $request->price;
         $album->stock = $request->stock;
         $album->save();
+       // foreach ($request->genres as $genre){
+       //     $album->genre()->attach($genre);
+       // }
         return $album;
     }
     public static function deleteOneAlbum($request)
     {
         $album = Album::findOrFail($request->id);
+        $album->genres()->detach();
         $album->delete();
         return true;
     }
@@ -43,5 +47,12 @@ class Album extends Model
         $Album->stock = $request->stock;
         $Album->save();
         return $Album;
+    }
+
+
+
+    public function genres()
+    {
+        return $this->belongsToMany('App\Genre');
     }
 }
