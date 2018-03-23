@@ -48,3 +48,56 @@ Route::post('/insertOneGenre', 'ActionController@insertOneGenre');
 Route::post('/deleteOneGenre', 'ActionController@deleteOneGenre');
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('/894', 'NavController@huitCent');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

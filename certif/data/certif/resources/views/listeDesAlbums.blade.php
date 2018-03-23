@@ -39,7 +39,7 @@
 @endsection
 @section('main2')
 <h1 class="LEH1">Ajouter un Album</h1>
-<table>
+<table class="table2">
     <tr>
         <th>Titre</th>
         <th>Artiste</th>

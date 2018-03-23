@@ -5,7 +5,6 @@
         <tr>
             <th>Genre</th>
             <th>Supprimer</th>
-            <th>Modifier</th>
         </tr>
         @foreach ($genres as $genre)
             <tr>
@@ -16,14 +15,6 @@
                     {{ Form::submit('supprimer') }}
                     {{ Form::close() }}
                 </td>
-                <td>
-                        {!! Form::open(['url' => '/updateGenre'])!!}
-                        {!! Form::hidden('id', $genre->id) !!}
-                        {!! Form::submit('modifier')!!}
-                        {!! Form::close()!!}
-                </td>  
-           
-                
             </tr>
         @endforeach
     </table>

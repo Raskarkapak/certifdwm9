@@ -13,6 +13,7 @@
     <h1 class="LEH1">Magasin de Musique</h1>
     <nav>
         <ul>
+            <li><a href="/">Page d'accueil</a></li>
             <li><a href="/listeDesInstruments">Instruments</a></li>
             <li><a href="/listeDesAlbums">Albums</a></li>
             <li><a href="/listeDesGenres">Genres</a></li>
@@ -25,5 +26,6 @@
     <main>
             @yield('main2')
     </main>
+
 </body>
 </html>

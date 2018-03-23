@@ -36,4 +36,10 @@ class NavController extends Controller
     }
 
 
+    public function huitCent(Request $request)
+    {
+        return view ('894');
+    }
+
+
 }
